@@ -1,5 +1,5 @@
 let player = {
-    name: "Per",
+    name: "Arthur",
     chips: 200,
 }
 
@@ -12,8 +12,6 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
-
-playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
@@ -37,6 +35,7 @@ function startGame() {
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
+    playerEl.textContent = player.name + ": $" + player.chips
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
     }
